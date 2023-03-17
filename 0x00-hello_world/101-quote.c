@@ -1,12 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
+
+#include <unistd.h>
+#include <string.h>
 
 /**
- * main - Entry point
- * Return: Always 1 (Success)
+ * main - Entry Point
+ *
+ * Description: This program prnts to stderr
+ * Return: 1 (Success) or -1 (Error)
  */
 int main(void)
 {
-	write(STDOUT_FILENO, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	char buf[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(1, &buf, strlen(buf));
+
 	return (1);
 }
