@@ -13,9 +13,10 @@ int main(void)
 	{
 		putchar(j);
 		if (j != '9')
-		
+		{
 			putchar(',');
 			putchar(' ');
+		}
 	}
 	putchar('\n');
 	return (0);
