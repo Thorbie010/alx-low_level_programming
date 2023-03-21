@@ -4,7 +4,7 @@
 /**
  * print_alphabet - check the  code
  * printing a...z
- * Return: Always 0 (Success)
+ * Return: nothing
  */
 void print_alphabet(void)
 {
@@ -13,6 +13,4 @@ void print_alphabet(void)
 	for (a = 'a'; a <= 'z'; a++)
 		_putchar(a++);
 	_putchar('\n');
-
-		return (0);
 }
