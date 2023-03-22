@@ -1,34 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Entry Point
+ * main - Entry point
  *
- * Description: This program prints the sum of the even valued terms
- * in the Fibonacci sequence
- * Return: 0  (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	unsigned long int a = 1;
-	unsigned long int b = 2;
-	unsigned long int next;
-	unsigned long int i;
-	unsigned long int sum = 0;
+	int i;
+	long int fibonacci[50], sum = 2;
 
-	for (i = 0; i <= 50; i++)
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+
+	for (i = 2; i < 50; i++)
 	{
-		a = b;
-		b = next;
-		next = a + b;
-
-		if (next % 2 == 0 && next < 4000000)
-		{
-			sum = sum + next;
-		}
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
+			sum += fibonacci[i];
 	}
-
-	printf("%lu\n", sum);
+	printf("%ld\n", sum);
 
 	return (0);
 }
