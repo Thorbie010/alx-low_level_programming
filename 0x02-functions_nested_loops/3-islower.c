@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * _islower (int c) - start here
+ * _islower - start here
+ * @c: check c
  * program to check if c is a lowercase or uppercase letter
- * Return: nothing
+ * Return: 1 or 0
  */
 int _islower(int c)
 {
 
-	if (_islower(c))
+	if (_islower("%d", c))
 		return (1);
 	else
 		return (0);
