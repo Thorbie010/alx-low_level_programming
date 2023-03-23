@@ -2,25 +2,18 @@
 #include <math.h>
 
 /**
- *
- *
- *
+ * main - print largest prime factor for n
+ * Return: Always 0
  */
 int main(void)
 {
-       	int i, max = -1;
+	unsigned long int i, n = 612852475143;
 	
-	while(612852475143 % 2 == 0)
-       	{
-		printf("2");
-	}
-	for(i = 3; i <= sqrt(612852475143); i=i+2)
+	for(i = 3; i <= 12057; i =+ 2)
 	{
-		while(612852475143 % i == 0)
-		{
-			max = i;
-			printf("%d", max);
-		}
+		while(n % i == 0 && n != i)
+			n /= i;
 	}
-	return (0);
+	printf("%lu\n", n);
+        return (0);
 }
