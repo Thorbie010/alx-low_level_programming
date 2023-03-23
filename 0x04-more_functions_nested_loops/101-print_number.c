@@ -1,9 +1,8 @@
 #include "main.h"
-#include "main1.h"
+void print_int(int v);
 
 /**
  * print_number - a function that prints an integer.
- * print_int: Used to print an unsigned int
  * @n: An input integer
  * Return: Nothing
  */
@@ -20,4 +19,18 @@ void print_number(int n)
 		print_int(n);
 }
 
+/**
+ * print_integer - A function to priting n
+ * @v: is the n input
+ * Return: Nothing
+ */
+void print_int(int v)
+{
+	int i = 1000000000;
 
+	for (; i >= 1; i /= 10)
+		if (v / i != 0)
+		{
+			_putchar((v / i) % 10 + '0');
+		}
+}
