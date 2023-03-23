@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - printing a whitespace for the value of input n
+ * print_diagonal - printing a whitespace for the value of input n
  * followed by a \
  * @n: is the input
  * Return: Nothing
