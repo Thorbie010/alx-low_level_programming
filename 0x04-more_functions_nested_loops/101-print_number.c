@@ -20,7 +20,7 @@ void print_number(int n)
 }
 
 /**
- * print_integer - A function to priting n
+ * print_int - A function to priting n
  * @v: is the n input
  * Return: Nothing
  */
