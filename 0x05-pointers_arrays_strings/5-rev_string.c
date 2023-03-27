@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _puts - Write a function that prints a string, followed
+ * print_rev - Write a function that prints a string, followed
  * by a new line, to stdout.
- * @str: an input string
+ * @s: an input string
  * Return: Nothing
  */
 void print_rev(char *s)
@@ -13,7 +13,7 @@ void print_rev(char *s)
 
 	while (s[i] != '\0')
 		i++;
-	
+
 	while (j < i--)
 	{
 		rev = s[j];
