@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
- *
+ * _strspn - entry point
+ * @s: first string
+ * @accept: second string
+ * Return: len
  */
 
 unsigned int _strspn(char *s, char *accept)
