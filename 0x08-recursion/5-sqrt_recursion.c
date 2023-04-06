@@ -9,7 +9,7 @@
  */
 int _sqrt_solver(int n, int lower, int upper)
 {
-	int middle = (upper + lower) / 2;
+	long double middle = (upper + lower) / 2;
 	int root = middle * middle;
 
 	if (lower > upper)
