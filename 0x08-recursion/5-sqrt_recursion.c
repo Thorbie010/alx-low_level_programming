@@ -33,6 +33,6 @@ int _sqrt_recursion(int n)
 		return (-1);
 	else if (n == 1 || n == 0)
 		return (n);
-	return (_sqrt_solver(n, 1, n / 2));
+	return (_sqrt_solver(n, 1, n));
 }
 
