@@ -1,4 +1,5 @@
 #include "main.h"
+
 int _strlen(char *s);
 /**
  * is_palindrome --> funnction to check string is palindrome
@@ -7,14 +8,18 @@ int _strlen(char *s);
  */
 int is_palindrome(char *s)
 {
-	int len = _strlen(s), i;
-	
-	for (i = 0; i < len / 2; i++)
+	int len = _strlen(s);
+	char *start = s;
+	char *end = s + len - 1;
+
+	while (start < end)
 	{
-		if (s[i] != s[len - i - 1])
+		if (*start != *end)
 		{
 			return (0);
 		}
+		start++;
+		end--;
 	}
 	return (1);
 }
