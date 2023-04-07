@@ -24,10 +24,10 @@ int check_primality(int divisor, int n)
  */
 int is_prime_number(int n)
 {
-	if (1 >= n)
+	if (n <= 1)
 		return (0);
 	else if (n == 2 || n == 3)
 		return (1);
-	else 
+	else
 		return (check_primality(2, n));
 }
