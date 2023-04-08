@@ -15,11 +15,12 @@ int main(int argc, char *argv[])
 
 	while (argc-- > 1)
 	{
-		for (i = 0; i < argv[argc][i]; i++)
+		for (i = 0; (i < argv[argc][i]) != '\0'; i++)
 		{
 			if (isdigit(argv[argc][i]))
 			{
-				add += atoi(argv[argc]);
+				add += atoi(&argv[argc][i]);
+				break;
 			}
 			else
 			{
