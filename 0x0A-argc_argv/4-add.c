@@ -28,6 +28,11 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
+		if (argv[argc][i] == '\0')
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
 	printf("%d\n", add);
 	return (0);
