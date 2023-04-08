@@ -8,25 +8,23 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i;
-	long long int mul = 1;
+	int i, j, result;
 
-	if (argc > 1)
-	{
-		i = 1;
-		while (i < argc)
-		{
-			mul *= atoll(argv[i]);
-			i++;
-		}
-		printf("%lld\n", mul);
-	}
-	else if
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	return (0);
+	else
+	{
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
+
+		result = i * j;
+
+		printf("%d\n", result);
+		return (0);
+	}
 }
