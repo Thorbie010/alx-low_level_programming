@@ -10,15 +10,22 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	long double mul = 1;
+	int i, mul = 1;
 
 	if (argc > 1)
 	{
-		for (i = 1; i < argc; i++)
+		i = 1;
+		while (i < argc)
+		{
 			mul *= atoi(argv[i]);
-
-		printf("%Lf\n", mul);
+			i++;
+		}
+		printf("%d\n", mul);
+	}
+	else if (argc < 2)
+	{
+		printf("Error\n");
+		return (1);
 	}
 	return (0);
 }
