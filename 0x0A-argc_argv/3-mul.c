@@ -10,19 +10,20 @@
 
 int main(int argc, char *argv[])
 {
-	int i, mul = 1;
+	int i;
+	long long int mul = 1;
 
 	if (argc > 1)
 	{
 		i = 1;
 		while (i < argc)
 		{
-			mul *= atoi(argv[i]);
+			mul *= atoll(argv[i]);
 			i++;
 		}
-		printf("%d\n", mul);
+		printf("%lld\n", mul);
 	}
-	else if (argc < 2)
+	else if
 	{
 		printf("Error\n");
 		return (1);
