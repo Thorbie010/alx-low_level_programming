@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int add = 0;
 	int j, num;
-	
+
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		char *arg = argv[i];
-		
+
 		j = 0;
 		while (arg[j])
 		{
