@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * free_grid - function to free memory stored by 
+ * free_grid - function to free memory stored by
  * 2d arrary
  * @height: height of grid
  * @grid: grid to free
