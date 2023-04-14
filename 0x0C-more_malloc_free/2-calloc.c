@@ -8,7 +8,7 @@
  * @nmemb: array input
  * @size: array input size
  * Return: Null if (fail, size or nmemb = 0)
- * else return ptr to memory allocated 
+ * else return ptr to memory allocated
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
