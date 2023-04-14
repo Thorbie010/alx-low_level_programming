@@ -26,11 +26,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n > l2)
 		n = l2;
 
-	new_str = (char *) malloc(l1 + 1 + n);
+	new_str = (char *) malloc(l1 + n + 1);
 	if (new_str == NULL)
 		return (NULL);
 
-	strcpy(new_str, s1);
+	strncpy(new_str, s1, l1);
 	strncat(new_str, s2, n);
 
 	new_str[l1 + n] = '\0';
