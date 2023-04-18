@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
 
-dog_t *new_dog(char *name, float age, char *owner)
 /**
  * new_dog - creates a new dog structure
  * @name: Dog's name
