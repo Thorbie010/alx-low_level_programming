@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
 	}
 	func_ptr = (unsigned char *)main;
 	for (i = 0; i < bytes; i++)
-		printf("%02x", *(func_ptr + 1));
-	
+		printf("%02x", *(func_ptr + i));
+
 	printf("\n");
 	return (0);
 }
