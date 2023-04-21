@@ -10,23 +10,23 @@
 int main(int argc, char *argv[])
 {
 	int bytes, i;
-	unsigned char *func_ptr;
+	unsigned char *func_ptr = (char *) main;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
-	func_ptr = (unsigned char *)main;
-	for (i = 0; i < bytes; i++)
-		printf("%02x", *(func_ptr + i));
+	
+	for (i = 0; i < bytes; i++, func_ptr++)
+		printf("%02x", *func_ptr);
 
-	printf("\n");
+	printf("%02x\n", *func_ptr);
 	return (0);
 }
