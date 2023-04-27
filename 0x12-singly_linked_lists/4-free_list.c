@@ -1,25 +1,21 @@
-es (20 sloc)  325 Bytes
- 
-
 #include "lists.h"
-/**
- * free_list - Frees a list of nodes
- * @head: pointer to the first element of the list
- */
 
+/**
+ * free_list - A function that frees all elements in a linked list
+ * @head: pointer to head element of list
+ * Return: Nothing
+ */
 void free_list(list_t *head)
 {
-	list_t *tmp;
+	list_t *temp;
 
-	if (head == NULL)
-		return;
-	while (head->next != NULL)
+	temp = head;
+	while (head)
 	{
-		tmp = head->next;
-		free(head->str);
-		free(head);
-		head = tmp;
+		temp = head;
+		head = head->next;
+		free(temp->str);
+		free(temp);
 	}
-	free(head->str);
 	free(head);
 }
