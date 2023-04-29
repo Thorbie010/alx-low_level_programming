@@ -1,5 +1,5 @@
-#ifndef _LIST_H
-#define _LIST_H
+#ifndef _LIST_H_
+#define _LIST_H_
 
 /**
  * struct listint_s - singly linked list
@@ -17,4 +17,4 @@ typedef struct listint_s
 
 size_t print_listint(const listint_t *h);
 
-#endif /* _LIST_H */
+#endif /* _LIST_H_ */
