@@ -1,18 +1,20 @@
 #include "lists.h"
+
 /**
- * dlistint_len - funtion taht prints number of nodes in a linked list
- * @h: head of node
- * Return: number of nodes
+ * dlistint_len - A function that gets the length of the list
+ * @h: The head of the list
+ * Return: The number of nodes
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nodecount = 0;
-	const dlistint_t *current = h;
+	size_t nodes = 0;
+	const dlistint_t *temp;
 
-	while (current != NULL)
+	temp = h;
+	while (temp)
 	{
-		nodecount = nodecount + 1;
-		current = current->next;
+		temp = temp->next;
+		nodes++;
 	}
-	return (nodecount);
+	return (nodes);
 }
