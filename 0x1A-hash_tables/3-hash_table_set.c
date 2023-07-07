@@ -12,7 +12,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int index = key_index((unsigned char *)key, ht->size);
 	hash_node_t *newPair;
 	char *new_key = strdup(key), *new_value = strdup(value);
-
+	
+	if (!ht || !key || !value)
+		return (0);
+	else if (strlen(key) == 0)
+		return (0);
 	newPair = (hash_node_t *)malloc(sizeof(hash_node_t));
 	if (newPair == NULL)
 		return (0);
