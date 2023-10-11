@@ -19,7 +19,7 @@ int linear_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i <= size - 1; i++)
 	{
 		printf("value chacked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
